@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <title>E-Ticket</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo-aep.png') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <img src="{{ url_for('static', filename='img/favicon.png') }}" alt="Logo" class="logo">
+            <div class="top-bar-links">
+                <a href='/'>Home</a>
+                <a href='/admin'>Admin Panel</a>
+                <a href='/job_MS'>Add Job</a>
+                <a href='/check'>History</a>
+                <a href='/logout'>Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <p>สถานะการแจ้งเตือนเครื่องปริ้น: 
+            {% if alert_status %}
+                <span class="status">เปิด</span>
+            {% else %}
+                <span class="status off">ปิด</span>
+            {% endif %}
+        </p>
+
+        <form method="POST" id="alertForm">
+            <button type="submit" class="font">
+                {% if alert_status %}
+                    ปิดการแจ้งเตือน
+                {% else %}
+                    เปิดการแจ้งเตือน
+                {% endif %}
+            </button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#alertForm').submit(function(event) {
+                event.preventDefault();  // ป้องกันไม่ให้ฟอร์มถูกส่งทันที
+    
+                // แสดง SweetAlert2 เมื่อกดปุ่ม
+                Swal.fire({
+                    title: 'สถานะการแจ้งเตือน',
+                    text: "{% if alert_status %}ปิดการแจ้งเตือน{% else %}เปิดการแจ้งเตือน{% endif %}",
+                    icon: '{% if alert_status %}error{% else %}success{% endif %}',
+                    confirmButtonText: 'ตกลง'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // ส่งฟอร์มจริง ๆ เมื่อผู้ใช้ยืนยัน
+                        $('#alertForm')[0].submit();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    justify-content: center;
+    align-items: center;
+    background: rgb(235, 234, 234);
+    min-height: 100vh;
+}
+
+.font {
+    font-family: 'Kanit', sans-serif;
+}
+
+.header-container {
+    background-color: #ffcb00;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+    text-align: center;
+    border-top: 2px solid #ffcb00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.u-label {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+input[type=text], input[type=password] {
+    padding: 5px 15px;
+    margin: 8px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.button_login {
+    background-color: #04AA6D;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button_login:hover {
+    background-color: #45b67a;
+}
+
+button {
+    white-space: nowrap;
+}
+
+.container {
+    width: 60%;
+    padding: 16px;
+}
+
+.title {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateX(-100%);
+}
+
+footer {
+    color: rgb(187, 185, 185);
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .boxchat {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .boxchat h3 {
+        font-size: 18px;
+    }
+
+    .boxchat p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .header-container {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    form {
+        padding: 5px;
+        margin: 0;
+    }
+    .header-container {
+        padding: 5px;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    form, .box, .header-container {
+        width: 70%;
+        padding: 15px;
+        margin: 10px auto;
+        box-sizing: border-box;
+    }
+
+    .boxchat {
+        width: 150px;
+        margin: 10px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    form, .header-container {
+        width: 50%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .boxchat {
+        width: 180px;
+        margin: 15px;
+    }
+}
+
+.boxchat h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.boxchat p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 0;
+}
+
+.boxchat:nth-child(1) {
+    border-top: 2px solid #ffcb00;
+}
+
+.boxchat:nth-child(2) {
+    border-top: 2px solid #5cb85c;
+}
+
+.boxchat:nth-child(3) {
+    border-top: 2px solid #d9534f;
+}
+
+.boxchat:nth-child(1) p {
+    color: #f0ad4e;
+}
+
+.boxchat:nth-child(2) p {
+    color: #5cb85c;
+}
+
+.boxchat:nth-child(3) p {
+    color: #d9534f;
+}
+
+.boxchat {
+    display: inline-block;
+    width: 130px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fffffff3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    border-top: 2px solid transparent;
+}

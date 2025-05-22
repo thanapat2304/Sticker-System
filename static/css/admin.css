@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: rgb(235, 234, 234);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: fixed;
+    top: 180px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    color: #3498db;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 60%;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+.status {
+    background-color: #2ecc71;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.status.off {
+    background-color: #e74c3c;
+}
+
+.top-bar {
+    background-color: #333; /* สีพื้นหลังของ top bar */
+    color: white; /* สีตัวอักษร */
+    padding: 10px 0; /* ระยะห่างใน top bar */
+    position: fixed; /* ทำให้ top bar อยู่ด้านบนสุดตลอด */
+    width: 100%; /* กำหนดความกว้าง 100% */
+    top: 0; /* จัดให้อยู่ที่ด้านบน */
+    left: 0; /* จัดให้อยู่ทางซ้าย */
+    z-index: 1000; /* ให้ top bar อยู่เหนือส่วนอื่น */
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between; /* จัดให้โลโก้และลิงค์อยู่ห่างกัน */
+    align-items: center; /* จัดแนวตั้งให้ตรงกลาง */
+    padding: 0 20px;
+}
+
+.logo {
+    width: 40px; /* ขนาดโลโก้ */
+    height: auto;
+}
+
+.top-bar-links a {
+    color: white; /* สีตัวอักษร */
+    text-decoration: none; /* เอาขีดเส้นใต้ */
+    margin-left: 20px; /* ช่องว่างระหว่างลิงก์ */
+    font-size: 18px; /* ขนาดตัวอักษร */
+}
+
+.top-bar-links a:hover {
+    text-decoration: underline; /* เมื่อเอาเมาส์ไปวางจะขึ้นขีดเส้นใต้ */
+}
+
+.font {
+    font-family: 'Kanit', sans-serif;
+}

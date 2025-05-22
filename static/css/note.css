@@ -1,0 +1,214 @@
+.aepservice {
+    font-family: fantasy;
+    font-weight: normal;
+    color: rgb(211, 170, 38);
+    text-align: center;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    min-height: 100vh;
+    background: rgb(235, 234, 234);
+    padding-top: 40px;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    margin-top: 30px; /* เพิ่มระยะห่างให้พอสมควรจาก top bar */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1b84d;
+    color: white;
+  }
+
+td {
+    height: 40px;
+}
+
+footer {
+    color: rgb(187, 185, 185);
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.status-reject {
+    background-color: #ffcccc;
+}
+
+.status-succeed {
+    background-color: #ccffcc;
+}
+
+#myTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#myTable thead th {
+    background-color: #e4e4e4;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#myTable tbody td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.status-reject {
+    background-color: #f8d7da;  /* สีพื้นหลังแดง */
+    color: #721c24;  /* สีตัวอักษรแดง */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.status-succeed {
+    background-color: #d4edda;  /* สีพื้นหลังเขียว */
+    color: #155724;  /* สีตัวอักษรเขียว */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.status-pending {
+    background-color: #fff3cd;  /* สีพื้นหลังเหลืองอ่อน */
+    color: #856404;  /* สีตัวอักษรเหลืองเข้ม */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.pending-text {
+    color: #856404;  /* สีตัวอักษรเหลืองเข้ม */
+}
+
+.content {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Bar Styling */
+.top-bar {
+    background-color: #333; /* สีพื้นหลังของ top bar */
+    color: white; /* สีตัวอักษร */
+    padding: 10px 0; /* ระยะห่างใน top bar */
+    position: fixed; /* ทำให้ top bar อยู่ด้านบนสุดตลอด */
+    width: 100%; /* กำหนดความกว้าง 100% */
+    top: 0; /* จัดให้อยู่ที่ด้านบน */
+    left: 0; /* จัดให้อยู่ทางซ้าย */
+    z-index: 1000; /* ให้ top bar อยู่เหนือส่วนอื่น */
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between; /* จัดให้โลโก้และลิงค์อยู่ห่างกัน */
+    align-items: center; /* จัดแนวตั้งให้ตรงกลาง */
+    padding: 0 20px;
+}
+
+.logo {
+    width: 40px; /* ขนาดโลโก้ */
+    height: auto;
+}
+
+.top-bar-links a {
+    color: white; /* สีตัวอักษร */
+    text-decoration: none; /* เอาขีดเส้นใต้ */
+    margin-left: 20px; /* ช่องว่างระหว่างลิงก์ */
+    font-size: 18px; /* ขนาดตัวอักษร */
+}
+
+.top-bar-links a:hover {
+    text-decoration: underline; /* เมื่อเอาเมาส์ไปวางจะขึ้นขีดเส้นใต้ */
+}
+
+@media (max-width: 768px) {
+    #form-section {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    form input, form select, form textarea {
+        font-size: 14px;
+        height: 30px;
+        padding: 6px 8px;
+    }
+
+    .select2-container--default .select2-selection--single {
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+    
+    body {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    table, th, td {
+        font-size: 8px; /* ลดขนาดฟอนต์โดยรวม */
+    }
+
+    th, td {
+        padding: 3px; /* ลดระยะห่างภายในเซลล์โดยรวม */
+        text-align: center;
+    }
+
+    #myTable {
+        font-size: 8px; /* ลดขนาดฟอนต์ของตารางหลัก */
+    }
+
+    #myTable thead th, #myTable tbody td {
+        padding: 3px; /* ลดระยะห่างในเซลล์ของ thead และ tbody */
+    }
+
+    .aepservice {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}

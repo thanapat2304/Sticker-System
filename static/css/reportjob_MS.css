@@ -1,0 +1,258 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    min-height: 100vh;
+    background: rgb(235, 234, 234);
+    padding-top: 50px;
+}
+
+.aepservice {
+    font-family: fantasy;
+    font-weight: normal;
+    color: rgb(211, 170, 38);
+    text-align: center;
+    text-decoration: none;
+}
+
+.fonteservice {
+    font-weight: normal;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+    margin-top: 50px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+#form-section {
+    background-color: white; /* สีพื้นหลังของฟอร์ม */
+    padding: 20px; /* ระยะห่างภายใน */
+    border-radius: 8px; /* ทำมุมให้กลม */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* เงาของกรอบ */
+    margin: 5px 0; /* ระยะห่างด้านบนและด้านล่าง */
+}
+
+form label {
+    display: block;
+    margin: 5px 0 5px;
+}
+
+form {
+    padding-right: 20px; /* เพิ่มพื้นที่ว่างทางด้านขวาของฟอร์ม */
+}
+
+form input {
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 13px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 35px;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.4); /* ปรับสีให้จางลง โดยค่าตัวเลขหลังสุด (0.3) ควบคุมความจาง */
+    opacity: 1; /* ทำให้แน่ใจว่า opacity ถูกตั้งค่าไว้ที่ 1 เพื่อป้องกันปัญหาในบางเบราว์เซอร์ */
+}
+
+form select {
+    font-size: 13px;
+    font-family: 'Kanit', sans-serif;
+    padding: 8px 10px;
+    margin-bottom: 13px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 35px;
+    width: 100%
+}
+
+form textarea {
+    font-size: 13px;
+    font-family: 'Kanit', sans-serif;
+}
+
+#REC_Details {
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    width: 100%; /* ขยายเต็มความกว้าง */
+    height: 150px; /* ตั้งค่าความสูงที่ต้องการ */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* อนุญาตให้ยืดได้เฉพาะทางแนวตั้ง */
+}
+
+.select2-container--default .select2-selection--single {
+    height: 35px;
+    min-height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.save {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.save:hover {
+    background-color: #218838;
+}
+
+.font {
+    font-family: 'Kanit', sans-serif;
+}
+
+footer {
+    color: rgb(187, 185, 185); /* สีตัวอักษร */
+    text-align: center; /* จัดให้อยู่กลาง */
+    padding: 10px 0; /* ช่องว่างบน-ล่าง */
+    bottom: 0;
+    width: 100%; /* ความกว้างเต็มหน้า */
+    font-size: 14px; /* ขนาดตัวอักษร */
+}
+
+footer p {
+    margin: 5px 0; /* ช่องว่างระหว่างบรรทัด */
+}
+
+/* Top Bar Styling */
+.top-bar {
+    background-color: #333; /* สีพื้นหลังของ top bar */
+    color: white; /* สีตัวอักษร */
+    padding: 10px 0; /* ระยะห่างใน top bar */
+    position: fixed; /* ทำให้ top bar อยู่ด้านบนสุดตลอด */
+    width: 100%; /* กำหนดความกว้าง 100% */
+    top: 0; /* จัดให้อยู่ที่ด้านบน */
+    left: 0; /* จัดให้อยู่ทางซ้าย */
+    z-index: 1000; /* ให้ top bar อยู่เหนือส่วนอื่น */
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between; /* จัดให้โลโก้และลิงค์อยู่ห่างกัน */
+    align-items: center; /* จัดแนวตั้งให้ตรงกลาง */
+    padding: 0 20px;
+}
+
+.logo {
+    width: 40px; /* ขนาดโลโก้ */
+    height: auto;
+}
+
+.top-bar-links a {
+    color: white; /* สีตัวอักษร */
+    text-decoration: none; /* เอาขีดเส้นใต้ */
+    margin-left: 20px; /* ช่องว่างระหว่างลิงก์ */
+    font-size: 18px; /* ขนาดตัวอักษร */
+}
+
+.top-bar-links a:hover {
+    text-decoration: underline; /* เมื่อเอาเมาส์ไปวางจะขึ้นขีดเส้นใต้ */
+}
+
+/* สำหรับหน้าจอที่มีความกว้างน้อยกว่า 768px */
+@media (max-width: 768px) {
+    #form-section {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    form input, form select, form textarea {
+        font-size: 14px;
+        height: 30px;
+        padding: 6px 8px;
+    }
+
+    .select2-container--default .select2-selection--single {
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+}
+
+/* สำหรับหน้าจอขนาดกลาง ๆ */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #form-section {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    form input, form select, form textarea {
+        font-size: 14px;
+        height: 30px;
+        padding: 6px 8px;
+    }
+
+    .select2-container--default .select2-selection--single {
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+}
+
+/* สำหรับหน้าจอที่มีความกว้างใหญ่กว่า 1024px */
+@media (min-width: 1025px) {
+    #form-section {
+        width: 80%; /* ให้ฟอร์มกว้างขึ้นเล็กน้อย */
+        max-width: 1000px; /* ขนาดสูงสุดของฟอร์ม */
+        margin: 0 auto;
+    }
+
+    form input, form select, form textarea {
+        font-size: 16px;
+        height: 35px;
+        padding: 8px 10px;
+    }
+
+    .select2-container--default .select2-selection--single {
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+}
+
+.font.go-job {
+    background-color: #247afc; /* สีพื้นหลังตามที่ต้องการ */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px; /* เว้นระยะห่างระหว่างปุ่ม */
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.font.go-job:hover {
+    background-color: #3358a8;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <title>E-Ticket</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+    .login-test-box {
+        width: 100%;
+        max-width: 645px;
+        margin: 20px auto;
+        background: #f9f9f9;
+        padding: 20px;
+        border-left: 6px solid #4CAF50;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        font-family: 'Anuphan', sans-serif;
+        box-sizing: border-box;
+    }
+
+    .login-test-box h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .login-test-box p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #444;
+    }
+    </style>
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='img/bg.jpg') }}'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+
+    <div class="header-container">
+        <span>E-Ticket Service Management</span>
+    </div>
+
+    <br>
+
+    <form action="/login" method="post">
+        <h3>สำหรับผู้ดูแลระบบ</h3>
+        <div class="container">
+            <label for="username" class="u-label font">Username</label>
+            <input type="text" placeholder="ระบุชื่อผู้ใช้" name="username" required class="font">
+    
+            <label for="password" class="u-label">Password</label>
+            <input type="password" placeholder="ระบุรหัสผ่าน" name="password" required class="font">
+    
+            <button type="submit" class="font button_login">เข้าสู่ระบบ</button>
+        </div>
+    </form>
+    <div class="login-test-box">
+        <h1><i class="material-icons" style="vertical-align: middle; color: #4CAF50;">info</i> User for Test</h1>
+        <p><strong>User:</strong> admin</p>
+        <p><strong>Password:</strong> Admin@1</p>
+    </div>
+
+    <footer>
+            <p>Sopon-Product Co.,Ltd.</p>
+            <p>Develop by Thanapurt Sopon | Last Update 2025</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            {% if alert_status %}
+                showAlert();
+            {% endif %}
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    min-height: 100vh;
+    background: rgb(235, 234, 234);
+}
+
+.font {
+    font-family: 'Kanit', sans-serif;
+}
+
+#form-section {
+    background-color: white; /* สีพื้นหลังของฟอร์ม */
+    padding: 20px; /* ระยะห่างภายใน */
+    border-radius: 8px; /* ทำมุมให้กลม */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* เงาของกรอบ */
+    margin: 5px 0; /* ระยะห่างด้านบนและด้านล่าง */
+}
+
+form label {
+    display: block;
+    margin: 5px 0 5px;
+}
+
+form {
+    padding-right: 20px; /* เพิ่มพื้นที่ว่างทางด้านขวาของฟอร์ม */
+}
+
+form input {
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 13px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 35px;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.4); /* ปรับสีให้จางลง โดยค่าตัวเลขหลังสุด (0.3) ควบคุมความจาง */
+    opacity: 1; /* ทำให้แน่ใจว่า opacity ถูกตั้งค่าไว้ที่ 1 เพื่อป้องกันปัญหาในบางเบราว์เซอร์ */
+}
+
+form select {
+    font-size: 13px;
+    font-family: 'Kanit', sans-serif;
+    padding: 8px 10px;
+    margin-bottom: 13px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 35px;
+    width: 100%
+}
+
+form textarea {
+    font-size: 13px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    color: rgb(187, 185, 185); /* สีตัวอักษร */
+    text-align: center; /* จัดให้อยู่กลาง */
+    padding: 10px 0; /* ช่องว่างบน-ล่าง */
+    bottom: 0;
+    width: 100%; /* ความกว้างเต็มหน้า */
+    font-size: 14px; /* ขนาดตัวอักษร */
+}
+
+footer p {
+    margin: 5px 0; /* ช่องว่างระหว่างบรรทัด */
+}
+
+.container {
+    min-height: 100vh; /* พื้นหลังเต็มหน้า */
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+}
+
+.back {
+    background-color: #f44336;
+    border: none;
+    padding: 7px 12px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.back:hover {
+    background-color: rgb(158, 49, 49);
+    opacity: 0.8;
+}
+
+.save {
+    font-family: 'Kanit', sans-serif;
+    background-color: #28a745;
+    border: none;
+    padding: 7px 12px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.save:hover {
+    background-color: #218838;
+    opacity: 0.8;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <title>E-Ticket</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reportjob.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="{{ url_for('static', filename='js/dropdown.js') }}"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <img src="{{ url_for('static', filename='img/favicon.png') }}" alt="Logo" class="logo">
+            <div class="top-bar-links">
+                <a href='/'>Home</a>
+                <a href='/job'>Add Job</a>
+                <a href='/note'>History</a>
+                <a href='/login'>Login</a>
+            </div>
+        </div>
+    </div>
+        <div class="content">
+            <div id="form-section"> 
+                <h2 class="center">แจ้งเรื่อง</h2>
+                <form id="labelForm" method="POST">
+                    <label for="REC_Name">ชื่อผู้แจ้งเรื่อง:</label>
+                    <input type="text" id="REC_Name" name="REC_Name" required placeholder="ระบุชื่อผู้แจ้ง:"><br>
+
+                    <label for="REC_Department">แผนก/หน่วยงาน:</label>
+                    <select id="REC_Department" name="REC_Department" class="select2" required>
+                        <option value="">-- เลือก... --</option>
+                        {% for agency in agency %}
+                            <option value="{{ agency }}">{{ agency }}</option>
+                        {% endfor %}
+                    </select><br>
+
+                    <label for="REC_Subject">ประเภท/หัวข้อเรื่อง:</label>
+                    <select id="REC_Subject" name="REC_Subject" class="select2" required>
+                        <option value="">-- เลือก... --</option>
+                        {% for types in types %}
+                            <option value="{{ types }}">{{ types }}</option>
+                        {% endfor %}
+                    </select><br>
+
+                    <label for="REC_Quantity">จำนวน(แผ่น):</label>
+                    <select id="REC_Quantity" name="REC_Quantity" class="select2" required>
+                        <option value="">-- เลือก... --</option>
+                        {% for quantity in quantity %}
+                            <option value="{{ quantity }}">{{ quantity }}</option>
+                        {% endfor %}
+                    </select><br>
+
+                    <label for="REC_Details">รายละเอียด:</label>
+                    <textarea id="REC_Details" name="REC_Details" rows="10" cols="30" placeholder="ระบุรายละเอียด: เช่น ชื่อสินค้า, ล็อตผลิต, วันผลิต, วันหมดอายุ อื่นๆ" maxlength="74"></textarea>
+                    <br>
+                    <button type="submit" class="font save">บันทึก <i class="fa-regular fa-paper-plane" style="color: #ffffff;"></i></button>
+                </form>
+            </div>
+            <footer>
+            <p>Sopon-Product Co.,Ltd.</p>
+            <p>Develop by Thanapurt Sopon | Last Update 2025</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
