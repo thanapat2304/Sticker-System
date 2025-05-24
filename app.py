@@ -65,7 +65,7 @@ def job():
         Subject : {request.form['REC_Subject']}
         จำนวน : {request.form['REC_Quantity']} แผ่น
         Detail : {request.form['REC_Details']}
-        http://aep-service.ddns.net:8088
+        https://portfolio-crg1.onrender.com
         """
 
         token = '#'
@@ -94,7 +94,7 @@ def job_MS():
         Subject : {request.form['REC_Subject']}
         จำนวน : {request.form['REC_Quantity']} แผ่น
         Detail : {request.form['REC_Details']}
-        http://aep-service.ddns.net:8088
+        https://portfolio-crg1.onrender.com
         """
 
         token = '#'
