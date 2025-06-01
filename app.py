@@ -11,7 +11,7 @@ from backend.db_connection import connect_e_ticket
 from backend.total import fetch_COUNT_Total , fetch_COUNT_Succeed_Total, fetch_COUNT_Reject_Total, fetch_COUNT_Pending_Total, get_topic_data, fetch_monthly_record_count
 
 app = Flask(__name__)
-app.secret_key = '86679f9154d781668b739b1fc8134674'
+app.secret_key = '000000000000000000'
 app.permanent_session_lifetime = timedelta(minutes=30)
 
 def send_telegram_notify(message, token, chat_id):

@@ -8,7 +8,7 @@ def generate_order_id(conn):
     today_date = datetime.now().strftime('%y%m%d')
     prefix = f"{today_date}#"
 
-    query = f"SELECT fda_Num FROM fda_tb_sticker WHERE fda_Num LIKE '{prefix}%' ORDER BY fda_Num DESC LIMIT 1"
+    query = f"SELECT * FROM Demo_tb WHERE fda_Num LIKE '{prefix}%' ORDER BY fda_Num DESC LIMIT 1"
     cursor = conn.cursor()
     cursor.execute(query)
     result = cursor.fetchone()
